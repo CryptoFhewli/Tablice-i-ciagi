@@ -1,0 +1,18 @@
+unsigned int compression(bool just_some_data[32])
+{
+    unsigned int compressed_value = 0;
+
+    for (int i = 0; i < 32; ++i)
+    {
+        // Przesuń istniejącą wartość w lewo
+        compressed_value <<= 1;
+
+        // Ustaw ostatni bit na wartość elementu tablicy
+        if (just_some_data[i])
+        {
+            compressed_value |= 1;
+        }
+    }
+
+    return compressed_value;
+}
