@@ -1,0 +1,11 @@
+void decompression(unsigned int just_some_compressed_data, bool just_some_data[32])
+{
+    for (int i = 31; i >= 0; --i)
+    {
+        // Ustaw element tablicy na wartość ostatniego bitu w just_some_compressed_data
+        just_some_data[i] = (just_some_compressed_data & 1) == 1;
+
+        // Przesuń just_some_compressed_data w prawo o 1 bit
+        just_some_compressed_data >>= 1;
+    }
+}
