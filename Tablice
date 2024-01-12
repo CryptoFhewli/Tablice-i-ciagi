@@ -1,0 +1,11 @@
+unsigned int lipsticks_per_month(unsigned short lipsticks_per_day[])
+{
+    unsigned int total_production = 0;
+
+    for (int day = 0; day < 31; ++day)
+    {
+        total_production += lipsticks_per_day[day];
+    }
+
+    return total_production;
+}
