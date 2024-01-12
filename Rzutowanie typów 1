@@ -1,0 +1,9 @@
+int Floor(double value)
+{
+    if (value >= 0) {
+        return static_cast<int>(value);
+    } else {
+        int intValue = static_cast<int>(value);
+        return (value == intValue) ? intValue : intValue - 1;
+    }
+}
