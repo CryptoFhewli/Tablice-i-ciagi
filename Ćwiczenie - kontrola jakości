@@ -1,0 +1,16 @@
+unsigned int quality_report(bool quality_check[1000])
+{
+    unsigned int defective_count = 0;
+
+    // Przeszukaj tablicę i zlicz wadliwe sztuki
+    for (int i = 0; i < 1000; ++i)
+    {
+        if (!quality_check[i])
+        {
+            // Jeśli element tablicy ma wartość false, to sztuka jest wadliwa
+            ++defective_count;
+        }
+    }
+
+    return defective_count;
+}
