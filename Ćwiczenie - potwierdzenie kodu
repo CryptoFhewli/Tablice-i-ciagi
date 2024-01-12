@@ -1,0 +1,8 @@
+#include <cstring>
+
+bool confirm_code(char code_received[], char code_base[])
+{
+    // Porównaj kody przy użyciu funkcji strcmp z biblioteki cstring
+    // Jeśli są identyczne, strcmp zwraca 0, więc negujemy wynik, aby otrzymać true
+    return !strcmp(code_received, code_base);
+}
