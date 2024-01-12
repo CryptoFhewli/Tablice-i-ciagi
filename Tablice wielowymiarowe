@@ -1,0 +1,29 @@
+#include <cmath>
+
+int rtg_check(unsigned short rtg_picture[25][25])
+{
+    int sum = 0;
+
+    double averageBrightness = 0.0;
+    for (int i = 0; i < 25; i++)
+    {
+        for (int j = 0; j < 25; j++)
+        {
+            averageBrightness += rtg_picture[i][j];
+        }
+    }
+    averageBrightness /= (25 * 25);
+
+    for (int i = 0; i < 25; i++)
+    {
+        for (int j = 0; j < 25; j++)
+        {
+            if (std::abs(rtg_picture[i][j] - averageBrightness) > 0.5 * averageBrightness)
+            {
+                sum++;
+            }
+        }
+    }
+
+    return sum;
+}
