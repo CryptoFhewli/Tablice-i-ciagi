@@ -1,0 +1,12 @@
+float sale_value(float sale_april[31][2], float exchange[31])
+{
+    float total_sale_value = 0.0;
+
+    // Oblicz wartość sprzedaży w złotych dla każdego dnia
+    for (int day = 0; day < 31; day++)
+    {
+        total_sale_value += sale_april[day][0] * sale_april[day][1] * exchange[day];
+    }
+
+    return total_sale_value;
+}
