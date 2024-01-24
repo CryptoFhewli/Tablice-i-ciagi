@@ -1,0 +1,13 @@
+#include <cstring>
+
+int available_length(char str[], int max_length) {
+    int current_length = strlen(str);
+
+    if (current_length > max_length) {
+        return -1;
+    }
+
+    int available = max_length - current_length;
+
+    return available;
+}
