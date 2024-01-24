@@ -1,0 +1,19 @@
+#include <ALPR_api.h>
+
+void check_speed ( int ticket_list[20][2] )
+{
+    int counter = 0;
+    
+    while (counter<20)
+    {
+        int speed = get_current_speed();
+        int plate = get_license_number();
+        if(speed>60)
+        {
+            ticket_list[counter][0] = plate;
+            ticket_list[counter][1] = speed;
+            counter++;
+        }
+        
+    }
+}
