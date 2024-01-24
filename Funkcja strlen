@@ -1,0 +1,8 @@
+#include <cstring>
+
+bool strlencmp(char str1[], char str2[]) {
+    int length1 = strlen(str1);
+    int length2 = strlen(str2);
+
+    return length1 == length2;
+}
